@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <form asp-controller="Cars" asp-action="GetCars" method="get">
+        <input type="text" name="Make" placeholder="Make" />
+        <input type="text" name="Model" placeholder="Model" />
+        <input type="text" name="Year" placeholder="Year" />
+        <input type="text" name="Color" placeholder="Color" />
+        <input type="submit" name="Submit" />
+    </form>
