@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\josep\\source\\repos\\CarCapMVC\\CarCapMVC\\CarCapMVC.csproj": {}
+    "C:\\Users\\Joe\\source\\repos\\CarCapMVC\\CarCapMVC\\CarCapMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\josep\\source\\repos\\CarCapMVC\\CarCapMVC\\CarCapMVC.csproj": {
+    "C:\\Users\\Joe\\source\\repos\\CarCapMVC\\CarCapMVC\\CarCapMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\josep\\source\\repos\\CarCapMVC\\CarCapMVC\\CarCapMVC.csproj",
+        "projectUniqueName": "C:\\Users\\Joe\\source\\repos\\CarCapMVC\\CarCapMVC\\CarCapMVC.csproj",
         "projectName": "CarCapMVC",
-        "projectPath": "C:\\Users\\josep\\source\\repos\\CarCapMVC\\CarCapMVC\\CarCapMVC.csproj",
-        "packagesPath": "C:\\Users\\josep\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\josep\\source\\repos\\CarCapMVC\\CarCapMVC\\obj\\",
+        "projectPath": "C:\\Users\\Joe\\source\\repos\\CarCapMVC\\CarCapMVC\\CarCapMVC.csproj",
+        "packagesPath": "C:\\Users\\Joe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Joe\\source\\repos\\CarCapMVC\\CarCapMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\josep\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Joe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

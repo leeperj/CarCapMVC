@@ -10,6 +10,7 @@ namespace CarCapMVC.Controllers
 {
     public class CarsController : Controller
     {
+
         public IActionResult Index()
         {
             return View();
@@ -17,56 +18,51 @@ namespace CarCapMVC.Controllers
 
         public async Task<IActionResult> GetCars()
         {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:44305/api/");
-            var response = await client.GetAsync("GetCars/");
+            var client = GetHttpClient();
+            var response = await client.GetAsync("Cars/");
             var result = await response.Content.ReadAsAsync<List<CarInfo>>();
             return View(result);
         }
         public async Task<IActionResult> GetCarById(int id)
         {
-             
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:44305/api/");
-            var response = await client.GetAsync($"GetCars/{id}");
-            var result = await response.Content.ReadAsAsync<CarInfo>();
-            return View(result);
-
-        }
-
-        public async Task<IActionResult> GetCarByMake(string make)
-        {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:44305/api/");
-            var response = await client.GetAsync($"GetCars/{make}");
+            
+            var client = GetHttpClient();
+            var response = await client.GetAsync($"Cars/{id}");
             var result = await response.Content.ReadAsAsync<CarInfo>();
             return View(result);
         }
 
-        public async Task<IActionResult> GetCarByModel(string model)
+        public async Task<IActionResult> SearchCars(string make, string model, string year, string color)
         {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:44305/api/");
-            var response = await client.GetAsync($"GetCars/{model}");
-            var result = await response.Content.ReadAsAsync<CarInfo>();
+
+            var client = GetHttpClient();
+
+            if (!string.IsNullOrWhiteSpace(make))
+            {
+                make.Trim().Replace(" ", "+"); 
+            }
+            if (!string.IsNullOrWhiteSpace(model))
+            {
+                model.Trim().Replace(" ", "+");
+            }
+            if (!string.IsNullOrWhiteSpace(year))
+            {
+                year.Trim().Replace(" ", "");
+            }
+            if (!string.IsNullOrWhiteSpace(color))
+            {
+                color.Trim().Replace(" ", "+");
+            }
+            var response = await client.GetAsync($"search?make={make}&model={model}&year={year}&color={color}");
+            var result = await response.Content.ReadAsAsync<IEnumerable<CarInfo>>();
             return View(result);
         }
 
-        public async Task<IActionResult> GetCarByYear(string year)
+        public static HttpClient GetHttpClient()
         {
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:44305/api/");
-            var response = await client.GetAsync($"GetCars/{year}");
-            var result = await response.Content.ReadAsAsync<CarInfo>();
-            return View(result);
-        }
-        public async Task<IActionResult> GetCarByColor(string color)
-        {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:44305/api/");
-            var response = await client.GetAsync($"GetCars/{color}");
-            var result = await response.Content.ReadAsAsync<CarInfo>();
-            return View(result);
+            return client;
         }
 
 
