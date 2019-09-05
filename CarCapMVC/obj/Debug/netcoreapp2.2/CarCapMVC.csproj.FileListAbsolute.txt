@@ -60,3 +60,4 @@ C:\Users\Joe\source\repos\CarCapMVC\CarCapMVC\obj\Debug\netcoreapp2.2\CarCapMVC.
 C:\Users\Joe\source\repos\CarCapMVC\CarCapMVC\obj\Debug\netcoreapp2.2\CarCapMVC.dll
 C:\Users\Joe\source\repos\CarCapMVC\CarCapMVC\obj\Debug\netcoreapp2.2\CarCapMVC.pdb
 C:\Users\Joe\source\repos\CarCapMVC\CarCapMVC\obj\Debug\netcoreapp2.2\CarCapMVC.csproj.CopyComplete
+C:\Users\josep\source\repos\CarCapMVC\CarCapMVC\obj\Debug\netcoreapp2.2\Razor\Views\Cars\SearchCars.g.cshtml.cs

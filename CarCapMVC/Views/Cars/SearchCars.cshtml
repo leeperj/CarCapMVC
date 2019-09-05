@@ -2,6 +2,28 @@
 @{
     ViewData["Title"] = "SearchCars";
 }
-
+@model IEnumerable<CarCapMVC.Models.CarInfo>
 <h1>SearchCars</h1>
+@{ 
+
+<table class="table-dark" style="border-spacing: 15px 2px; border-collapse: separate; border-color: white;">
+    <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Color</th>
+    </tr>
+    @foreach (var car in Model)
+    {
+<tr>
+    <td>@car.Make</td>
+    <td>@car.Model</td>
+    <td>@car.Year</td>
+    <td>@car.Color</td>
+    
+</tr>
+    }
+
+</table>
+    }
 
